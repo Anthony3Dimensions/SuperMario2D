@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer; 
     private Rigidbody2D rBody;
     private GroundSensor sensor;
-    private Animator anim;
+    public Animator anim;
     float horizontal;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
        horizontal = Input.GetAxis("Horizontal");
-       transform.position += new Vector3(horizontal, 0, 0) *playerSpeed* Time.deltaTime; 
+       //transform.position += new Vector3(horizontal, 0, 0) *playerSpeed* Time.deltaTime; 
        if(horizontal < 0)
        {
           spriteRenderer.flipX = true;
@@ -51,5 +51,10 @@ public class PlayerController : MonoBehaviour
           anim.SetBool("IsJumping", true);
        }
 
+    }
+
+      void FixedUpdate() 
+    {
+      rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
     }
 }

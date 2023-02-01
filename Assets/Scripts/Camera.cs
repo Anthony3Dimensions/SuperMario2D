@@ -16,13 +16,9 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void LateUpdate()
     {
-        target = GameObject.Find("Mario_0").GetComponent<Transform>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //posicion deseada de la camara
+        if(target != null)
+        {
+            //posicion deseada de la camara
         Vector3 desiredPosition = target.position + offset;
 
         float clampX = Mathf.Clamp(desiredPosition.x, limitX.x , limitX.y);
@@ -35,4 +31,9 @@ public class Camera : MonoBehaviour
 
         transform.position = lerpedPosition;
     }
+       
+    }
+
+    
+    
 }
