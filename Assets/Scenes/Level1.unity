@@ -1841,9 +1841,10 @@ GameObject:
   - component: {fileID: 109608354}
   - component: {fileID: 109608356}
   - component: {fileID: 109608355}
+  - component: {fileID: 109608357}
   m_Layer: 0
   m_Name: Monedas
-  m_TagString: Untagged
+  m_TagString: Monedacolision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,7 +1914,7 @@ SpriteRenderer:
   m_Size: {x: 0.25, y: 1.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &109608356
@@ -1936,6 +1937,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &109608357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109608353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee55a99550c22648be5cd0d5f7ad85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112864198
 GameObject:
   m_ObjectHideFlags: 0
@@ -7519,7 +7532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 8
-  jumpforce: 9
+  jumpforce: 7
   anim: {fileID: 0}
 --- !u!212 &442309687
 SpriteRenderer:

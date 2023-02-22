@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private GroundSensor sensor;
     public Animator anim;
     float horizontal;
+    public Monedas monedas;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +57,14 @@ public class PlayerController : MonoBehaviour
       void FixedUpdate() 
     {
       rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+      if (collision.gameObject.tag == "Colisionmoneda")
+      {
+         Monedas monedas = collision.gameObject.GetComponent<Monedas>();
+         monedas.Pick();
+      }
     }
 }
