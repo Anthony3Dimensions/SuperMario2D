@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     int playerHealth = 3; 
+    int ContadorMonedas;
+    public Text contador;
     public float playerSpeed = 5.5f;
     public float jumpforce = 3f;
     string texto = "Hello World";
@@ -67,4 +69,18 @@ public class PlayerController : MonoBehaviour
          monedas.Pick();
       }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+      if(collision.gameObject.tag="CoinCollision")
+      {
+         Debug.Log("PickedCoin");
+         Coins coin = collision.gameObject.GetComponent<Coin>();
+         coin.Pick();
+         ContadorMonedas++;
+         Debug.Log(ContadorDeMondedas);
+         contador.text = "Coiners" + ContadorMonedas;
+      }
+    }
+
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Monedas : MonoBehaviour
 {
     Animator anim;
-    BoxColllider2D boxCollider;
+    BoxCollider2D boxCollider;
     SFXManager sfxManager;
     // Start is called before the first frame update
     void Start()
