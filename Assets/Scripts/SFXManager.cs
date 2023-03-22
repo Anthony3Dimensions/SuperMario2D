@@ -5,7 +5,6 @@ using UnityEngine;
 public class SFXManager : MonoBehaviour
 {
     public AudioClip goombaDeath;
-    public AudioClip marioDeath; 
     private AudioSource source;
     // Start is called before the first frame update
     void Awake()
@@ -17,17 +16,7 @@ public class SFXManager : MonoBehaviour
     {
         source.PlayOneShot(goombaDeath);
     }
-
-    public void MarioDeath() 
-    {
-        source.PlayOneShot(pickedcoin);
-    }
-
-       public void PickedCoin() 
-    {
-        source.PlayOneShot(marioDeath);
-    }
-
-
+     
+  
 
 }

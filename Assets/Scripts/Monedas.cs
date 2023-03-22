@@ -20,7 +20,6 @@ public class Monedas : MonoBehaviour
     {
        boxCollider.enabled = false;
        Destroy(this.gameObject);
-       sfxManager.PickedCoin();
-
+       
     }
 }

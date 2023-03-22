@@ -7534,6 +7534,7 @@ MonoBehaviour:
   playerSpeed: 8
   jumpforce: 7
   anim: {fileID: 0}
+  monedas: {fileID: 0}
 --- !u!212 &442309687
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17876,7 +17877,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaDeath: {fileID: 8300000, guid: 8d0473b69b06ad648afad5c0c506ed86, type: 3}
-  marioDeath: {fileID: 8300000, guid: 92966917d6d6ee64ea4f9ec99170db36, type: 3}
 --- !u!82 &1031600857
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19329,6 +19329,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1145598771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145598772}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145598772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145598771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -91.098694, y: -8.274314, z: -6.3363166}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159608862
 GameObject:
   m_ObjectHideFlags: 0

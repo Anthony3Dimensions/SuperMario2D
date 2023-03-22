@@ -16,7 +16,7 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void LateUpdate()
     {
-        if(target != null)
+        if(target != null && gameManager.isGameOver == false)
         {
             //posicion deseada de la camara
         Vector3 desiredPosition = target.position + offset;
