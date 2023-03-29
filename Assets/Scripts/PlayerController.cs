@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     float horizontal;
     public Monedas monedas;
     GameManager gameManager;
+    public GameObject bulletPreFavs;
+    public Transform bulletSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +38,14 @@ public class PlayerController : MonoBehaviour
        //transform.position += new Vector3(horizontal, 0, 0) *playerSpeed* Time.deltaTime; 
        if(horizontal < 0)
        {
-          spriteRenderer.flipX = true;
+          //spriteRenderer.flipX = true;
+          transform.rotation = Quaternion.Euler(0, 180, 0,);
           anim.SetBool("IsRunning", true);
        }
        else if(horizontal > 0)
        {
-          spriteRenderer.flipX = false;
+          //spriteRenderer.flipX = false;
+          transform.rotation = Quaternion.Euler(0, 0, 0,);
           anim.SetBool("IsRunning", true);
        } 
        else
@@ -53,6 +57,11 @@ public class PlayerController : MonoBehaviour
        {
           rBody.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
           anim.SetBool("IsJumping", true);
+       }
+
+       if(Input.GetKeyDown(KeyCode.F) && gameManager.canShoot);
+       {
+         Instantiate(bulletPreFavs, bulletSpawn.position, bulletSpawn.rotation);
        }
 
     }
