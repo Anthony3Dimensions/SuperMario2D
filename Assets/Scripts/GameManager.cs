@@ -7,10 +7,17 @@ public class GameManager : MonoBehaviour
 {
     //public bool isGameOver;
     //public bool canShoot;
+
+    public List<GameObject> enemiesInScreen = new List<GameObject>();
     // Start is called before the first frame update
    // void Start()
     {
-        
+        ShootPowerUp();
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            KillAllEnemies();
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +48,14 @@ public class GameManager : MonoBehaviour
     //if(collider.gameObject.tag == "PowerUp")
     {
         //gameManager.canShoot = true;
+    }
+
+    void KillAllEnemies()
+    {
+        for (int i = 0; i < enemiesInScreen.Count; i++)
+        {
+            Destroy(enemiesInScreen[i]);
+        }
     }
     
 }
